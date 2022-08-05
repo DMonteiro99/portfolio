@@ -1,7 +1,8 @@
 # portfolio
 
-Alura Challenge Sprint 01 - Projeto ONE - Portfólio.
+Challenge da Sprint 01 da trilha de Front-End na Alura pelo projeto ONE - Oracle Next Education.
 
-Trilha Front-End.
+Consiste em criar um portfólio pessoal.
 
-Primeira versão do Portfólio.
+
+-Daniel Monteiro-

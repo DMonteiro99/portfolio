@@ -1,10 +1,4 @@
-/*CSS Reset / Normalize*/
-/*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
-coloque nas sessões indicadas*/
-
 :root{
-    /*Insira a variavel das outras cores inspecionando o modelo do figma*/
-    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
    --cor-fonte-padrao: #363636;
    --cor-de-fundo: #F5F5F5;
    --cor-de-link: #000;
@@ -16,6 +10,10 @@ coloque nas sessões indicadas*/
    --cor-do-label: #A2A2A2;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     color: var(--cor-fonte-padrao);
     box-sizing: border-box;
@@ -24,11 +22,12 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1;
-    
 }
+
 ol, ul,li {
     list-style: none;
 }
+
 a{
     text-decoration: none;
     color: var(--cor-fonte-padrao);
@@ -37,19 +36,6 @@ a{
 /*input:focus, textarea:focus, select:focus {
     outline: 0;
 }*/
-
-/*Neste desafio, gostariamos que praticassem a metodologia BEM, caso seintam a vontade 
-de utiliza-la. 
-
-Mas o que é o BEM?
-
-BEM (Block, Element, Modifier) ​​é uma abordagem baseada em componentes para o desenvolvimento
-web. A ideia por trás disso é dividir a interface do usuário em blocos independentes.
-Isso torna o desenvolvimento de interface fácil e rápido, mesmo com uma interface
-de usuário complexa, e permite a reutilização de código existente sem copiar e colar.
-
-Link da documentação oficial!
-https://en.bem.info/methodology/quick-start/*/
 
 /*Seção Menu*/
 
@@ -320,7 +306,19 @@ section.about{
     margin-right: 2rem;
 }
 
+.experience__img__reverse {
+    width: 50%;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin-left: 2rem;
+}
+
 .experience__video {
+    width: 50%;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin-right: 2rem;
+}
+
+.experience__video__reverse {
     width: 50%;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     margin-left: 2rem;
@@ -334,6 +332,7 @@ section.about{
 .experience__text {
     font-size: 16px;
     font-weight: 500;
+    line-height: 18.78px;
 }
 
 .experience__description {
@@ -477,9 +476,6 @@ section.about{
     margin: 0;
 }
 
-/* Chegou a hora de se desafiar com a responsividade, 
-utilize como referência os breakpoints @media abaixo*/
-
 /*Tablet*/
 @media (min-width: 768px) and (max-width: 1279px) {
     section.menu{
@@ -573,13 +569,23 @@ utilize como referência os breakpoints @media abaixo*/
     }
 
     .experience__img {
-        margin-right: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .experience__img__reverse {
+        margin: 0;
         width: 100%;
     }
 
     .experience__video {
-        margin-left: 0;
+        margin: 0;
         width: 100%;
+    }
+
+    .experience__video__reverse {
+        margin: 0;
+        width: 100%;  
     }
 
     .formcontato{
@@ -639,6 +645,12 @@ utilize como referência os breakpoints @media abaixo*/
     .title__profile {
         width: 30%;
         height: 30%;
+        
+        /*inversão da foto*/
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
     }
 
     .title__container {
@@ -717,13 +729,23 @@ utilize como referência os breakpoints @media abaixo*/
     }
 
     .experience__img {
-        margin-right: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .experience__img__reverse {
+        margin: 0;
         width: 100%;
     }
 
     .experience__video {
-        margin-left: 0;
+        margin: 0;
         width: 100%;
+    }
+
+    .experience__video__reverse {
+        margin: 0;
+        width: 100%;  
     }
 
     .formcontato{
